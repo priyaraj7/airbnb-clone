@@ -1,20 +1,23 @@
 import React from "react";
 import Item from "./Item";
+import image1 from "../assets/1.jpg";
+import image2 from "../assets/2.jpg";
+import image3 from "../assets/3.jpg";
 
 const masterTicketList = [
   {
     names: "Online Experience",
-    location: "image url",
+    location: image1,
     issue: "Firebase won't save record. Halp.",
   },
   {
-    names: "Sleater and Kinney",
-    location: "4B",
+    names: "Monthly stays",
+    location: image2,
     issue: "Prop types are throwing an error.",
   },
   {
-    names: "Imani & Jacob",
-    location: "9F",
+    names: "Frontline stays",
+    location: image3,
     issue: "Child component isn't rendering.",
   },
 ];
@@ -31,6 +34,8 @@ function ItemList() {
           key={index}
         />
       ))}
+
+
     </React.Fragment>
   );
 }
