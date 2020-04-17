@@ -3,6 +3,7 @@ import Item from "./Item";
 import image1 from "../assets/1.jpg";
 import image2 from "../assets/2.jpg";
 import image3 from "../assets/3.jpg";
+import { CardGroup } from "react-bootstrap";
 
 const masterTicketList = [
   {
@@ -26,15 +27,16 @@ function ItemList() {
   return (
     <React.Fragment>
       <hr />
-      {masterTicketList.map((ticket, index) => (
-        <Item
-          names={ticket.names}
-          location={ticket.location}
-          issue={ticket.issue}
-          key={index}
-        />
-      ))}
-
+      <CardGroup>
+        {masterTicketList.map((ticket, index) => (
+          <Item
+            names={ticket.names}
+            location={ticket.location}
+            issue={ticket.issue}
+            key={index}
+          />
+        ))}
+      </CardGroup>
 
     </React.Fragment>
   );
