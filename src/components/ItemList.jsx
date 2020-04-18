@@ -3,7 +3,7 @@ import Item from "./Item";
 import image1 from "../assets/1.jpg";
 import image2 from "../assets/2.jpg";
 import image3 from "../assets/3.jpg";
-import { CardGroup } from "react-bootstrap";
+import { CardDeck } from "react-bootstrap";
 
 const masterTicketList = [
   {
@@ -27,7 +27,7 @@ function ItemList() {
   return (
     <React.Fragment>
       <hr />
-      <CardGroup>
+      <CardDeck>
         {masterTicketList.map((ticket, index) => (
           <Item
             names={ticket.names}
@@ -36,8 +36,7 @@ function ItemList() {
             key={index}
           />
         ))}
-      </CardGroup>
-
+      </CardDeck>
     </React.Fragment>
   );
 }

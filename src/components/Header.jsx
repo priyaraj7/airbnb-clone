@@ -1,29 +1,39 @@
-// import React from "react";
-// import "bootstrap/dist/css/bootstrap.min.css";
-
-// function Header() {
-//   return <h1>Air Bnb site</h1>;
-// }
-
-// export default Header;
-
-// ................
 import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
-import { Nav, Navbar, FormControl, Button, Form } from "react-bootstrap";
+import { Nav, Navbar, Button, NavDropdown } from "react-bootstrap";
+import logo from "../assets/logo.svg";
+import { MdLanguage } from "react-icons/md";
+
 function Header() {
   return (
-    <Navbar bg="primary" variant="dark">
-      <Navbar.Brand href="#home"></Navbar.Brand> {/*ask question */}
-      <Nav className="mr-auto">
-        <Nav.Link href="#home">Home</Nav.Link>
-        <Nav.Link href="#features">Notification</Nav.Link>
-        <Nav.Link href="#pricing">Message</Nav.Link>
+    <Navbar bg="light" variant="light" sticky="top">
+      <Navbar.Brand href="#home">
+        <a href="/home">
+          <img
+            src={logo}
+            height="30"
+            className="d-inline-block align-top"
+            alt="React Bootstrap logo"
+          />
+        </a>
+      </Navbar.Brand>
+      <Nav className="mr-auto"></Nav>
+      <Nav>
+        <MdLanguage></MdLanguage>
+        <NavDropdown id="nav-dropdown">
+          <NavDropdown.Item eventKey="4.1">
+            <MdLanguage />
+            English (US)
+          </NavDropdown.Item>
+          <NavDropdown.Item eventKey="4.2">$ USD</NavDropdown.Item>
+        </NavDropdown>
+
+        <Nav.Link href="#home">Host your home</Nav.Link>
+        <Nav.Link href="#experience">Host your experience</Nav.Link>
+        <Nav.Link href="#help">Help</Nav.Link>
+        <Nav.Link href="#login">Log in</Nav.Link>
+        <Button variant="outline-dark">Sign Up</Button>
       </Nav>
-      <Form inline>
-        <FormControl type="text" placeholder="Search" className="mr-sm-2" />
-        <Button variant="outline-light">Tweet</Button>
-      </Form>
     </Navbar>
   );
 }
