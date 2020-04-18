@@ -9,17 +9,17 @@ const masterTicketList = [
   {
     names: "Online Experience",
     location: image1,
-    issue: "Firebase won't save record. Halp.",
+    issue: "Unique activities we can do together, led by a world of hosts",
   },
   {
     names: "Monthly stays",
     location: image2,
-    issue: "Prop types are throwing an error.",
+    issue: "Make Airbnb your home, for stays of a month or longer.",
   },
   {
     names: "Frontline stays",
     location: image3,
-    issue: "Child component isn't rendering.",
+    issue: "Find or provide accomadation for COVID-19 responders.",
   },
 ];
 
