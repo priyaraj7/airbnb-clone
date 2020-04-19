@@ -1,19 +1,7 @@
 import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
-import { Tabs, Tab } from "react-bootstrap";
+import { Tabs, Tab, Badge } from "react-bootstrap";
 import SearchInput from "./SearchInput";
-
-// function ControlledTabs() {
-//   return (
-//     <Tabs id="controlled-tab-example">
-//       <Tab eventKey="stay" title="Places to stay"></Tab>
-//       <Tab eventKey="profile" title="Monthly stay"></Tab>
-//       <Tab title="Experience"></Tab>
-//     </Tabs>
-//   );
-// }
-
-// export default ControlledTabs;
 
 class Example extends React.Component {
   constructor(props, context) {
@@ -24,6 +12,12 @@ class Example extends React.Component {
   }
 
   render() {
+    const onlineExpTitle = (
+      <div>
+        Online Experiences &nbsp;
+        <Badge variant="danger">New</Badge>
+      </div>
+    );
     return (
       <Tabs
         id="controlled-tab-example"
@@ -37,10 +31,10 @@ class Example extends React.Component {
           <SearchInput />
         </Tab>
         <Tab eventKey="experience" title="Experiences">
-          Contact content
+          Experiences
         </Tab>
-        <Tab eventKey="online experience" title="Online Experiences">
-          Contact content
+        <Tab eventKey="online experience" title={onlineExpTitle}>
+          Online Experiences
         </Tab>
       </Tabs>
     );

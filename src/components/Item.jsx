@@ -5,17 +5,15 @@ import { Card, Button } from "react-bootstrap";
 
 function Item(props) {
   return (
-    // <React.Fragment>
-    //   <h3>
-    //     {props.location} - {props.names}
-    //   </h3>
-    //   <p>
-    //     <em>{props.issue}</em>
-    //   </p>
-    //   <hr />
-    // </React.Fragment>
-
-    <Card style={{ width: "18rem" }}>
+    <Card
+      style={{
+        width: "18rem",
+        overflow: "hidden",
+        borderRadius: "15px",
+        marginTop: "15px",
+        marginBottom: "15px",
+      }}
+    >
       <Card.Img variant="top" src={props.location} />
       <Card.Body>
         <Card.Title>{props.names}</Card.Title>

@@ -26,17 +26,19 @@ const masterTicketList = [
 function ItemList() {
   return (
     <React.Fragment>
-      <hr />
-      <CardDeck>
-        {masterTicketList.map((ticket, index) => (
-          <Item
-            names={ticket.names}
-            location={ticket.location}
-            issue={ticket.issue}
-            key={index}
-          />
-        ))}
-      </CardDeck>
+      <div padding="10px" margin="10px">
+        <hr />
+        <CardDeck>
+          {masterTicketList.map((ticket, index) => (
+            <Item
+              names={ticket.names}
+              location={ticket.location}
+              issue={ticket.issue}
+              key={index}
+            />
+          ))}
+        </CardDeck>
+      </div>
     </React.Fragment>
   );
 }
